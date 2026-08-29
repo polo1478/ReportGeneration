@@ -1,0 +1,14 @@
+project:
+  type: default
+  output-dir: _output
+
+format:
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+    html-math-method: katex
+  pdf:
+    toc: true
+    number-sections: true
+

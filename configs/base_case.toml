@@ -1,0 +1,20 @@
+# All values use SI units. These are fictional demonstration values.
+volume_m3 = 0.05
+initial_concentration_A_mol_m3 = 100.0
+initial_concentration_B_mol_m3 = 0.0
+initial_temperature_K = 298.15
+jacket_temperature_K = 298.15
+
+# k(T) = k_ref * exp[-Ea/R * (1/T - 1/T_ref)]
+k_ref_per_s = 0.001
+activation_energy_J_mol = 45000.0
+reference_temperature_K = 298.15
+reaction_enthalpy_J_mol = -50000.0
+
+# rho * Cp is a volumetric heat capacity.
+volumetric_heat_capacity_J_m3_K = 4.0e6
+UA_W_K = 150.0
+
+t_end_s = 5400.0
+dt_s = 1.0
+

@@ -1,0 +1,3 @@
+# Jacket-temperature sweep around the base case, in kelvin differences.
+jacket_temperature_offsets_K = [-5.0, 0.0, 5.0, 10.0]
+

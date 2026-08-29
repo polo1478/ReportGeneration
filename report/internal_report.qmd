@@ -1,0 +1,45 @@
+---
+title: "工艺模型内部技术报告：Julia 可复现 Demo"
+subtitle: "虚构的带夹套批式反应器（A → B）"
+date: last-modified
+lang: zh
+---
+
+# 决策摘要
+
+{{< include ../results/summary.md >}}
+
+本报告展示一条可迁移的证据链：配置文件 → Julia 仿真 → 结构化结果与图表 → 审计清单 → HTML/PDF 报告。它不主张任何真实药物工艺、设备或实验结论。
+
+# 用途、边界与限制
+
+{{< include ../docs/model_card.md >}}
+
+# 模型方程、假设与代码映射
+
+{{< include ../docs/equation_register.md >}}
+
+模型假设完全混合，因此“混合”在本 Demo 中被理想化为单一均相状态。真实项目应将混合模型与实验或过程数据对应起来；分离单元也应按照其具体机理建立独立的方程和验证证据。
+
+# 基准工况结果
+
+![A 与 B 的浓度轨迹。](../results/figures/concentrations.svg){#fig-concentrations width=90%}
+
+![反应器温度轨迹。](../results/figures/temperature.svg){#fig-temperature width=90%}
+
+# 参数敏感性
+
+{{< include ../results/sensitivity_summary.md >}}
+
+![夹套温度对最高反应器温度的影响。](../results/figures/jacket_temperature_sensitivity.svg){#fig-sensitivity width=90%}
+
+# 验证、可追溯性与下一步
+
+本 Demo 自动执行三类基础数值检查：物料衡算、非负浓度，以及无反应时的夹套冷却极限。完整结果文件在 `results/`；环境和版本追踪信息见 `results/run_manifest.json`。
+
+真实模型至少应补充：参数标定、独立数据验证、求解器收敛、适用范围、测量不确定性、敏感性和外推风险。所有支撑结论的公式、数据和参数都应在来源登记表中给出可审阅来源。
+
+# 运行清单
+
+{{< include ../results/run_manifest.json >}}
+

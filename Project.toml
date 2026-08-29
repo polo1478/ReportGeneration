@@ -1,0 +1,8 @@
+name = "PharmaProcessTwinDemo"
+uuid = "5e79bfd7-811c-4d8e-bf9d-77ed3a70a3d5"
+authors = ["Internal Process Modeling Team"]
+version = "0.1.0"
+
+[compat]
+julia = "1.12"
+
